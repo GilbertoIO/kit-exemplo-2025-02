@@ -5,11 +5,15 @@
 
 # paper/paper.pdf: 
 
-all: resultados/variacao_temperatura.csv resultados/numero_de_dados.txt figuras/variacao_temperatura.png
+all: paper/paper.pdf resultados/numero_de_dados.txt 
 	# Nenhum comando, o "all" é um alvo fictício
 	
 clean: 
-	rm -r -f -v resultados dados figuras
+	rm -r -f -v resultados dados figuras paper/paper.pdf
+	
+# adicionado na aula de 20/02
+paper/paper.pdf: paper/paper.tex figuras/variacao_temperatura.png
+	tectonic -X compile paper/paper.tex
 
 resultados/numero_de_dados.txt: dados/temperature-data.zip
 	mkdir -p resultados
