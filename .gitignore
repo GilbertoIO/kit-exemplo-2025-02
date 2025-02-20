@@ -3,3 +3,5 @@
 dados
 resultados
 figuras
+# paper/paper.pdf ou *.pdf
+*.pdf
