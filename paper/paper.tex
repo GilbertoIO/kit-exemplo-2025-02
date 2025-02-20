@@ -10,6 +10,13 @@
 % Pacote para figura
 \usepackage{graphicx}
 \usepackage[round,authoryear,sort]{natbib}
+\usepackage{notomath}
+
+\newcommand{\Title}{Análise de variação de temperatura dos últimos 5 anos}
+
+\input{paises.tex}
+
+% \newcommand{\Paises}{\input{paises.tex}}
 
 % Corpo
 % Onde a gente escreve o texto
@@ -18,14 +25,14 @@
 
 % Ambiente, entre begin e end
 
-\title{Análise de variação de temperatura dos últimos 5 anos}
+\title{\Title}
 \author{Gilberto Dias, Yago Castro, Arthur Macêdo}
 
 % Insere o título no pdf
 \maketitle
 
 \begin{abstract}
-Meu resumo legalzão.
+Meu resumo legalzão. \Title.
 \end{abstract}
 
 \section{Introdução}
@@ -66,9 +73,10 @@ reta com o método dos mínimos quadrados. Isso está descrito na seção \ref{s
 
 \section{Resultados}
 
-Analisamos os dados de 225 países. São muitos para listar aqui. Confie em mim.
+Analisamos os dados de 225 países. 
+Os países analisados foram: \Paises.
 
-\begin{figure}[htb]
+\begin{figure}[!htb]
 	\centering
 	\includegraphics[width=0.5\columnwidth]{../figuras/variacao_temperatura.png}
 	\caption{
