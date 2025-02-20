@@ -9,7 +9,7 @@
 \usepackage[brazil]{babel}
 % Pacote para figura
 \usepackage{graphicx}
-
+\usepackage[round,authoryear,sort]{natbib}
 
 % Corpo
 % Onde a gente escreve o texto
@@ -33,6 +33,10 @@ Isso vai ser a minha introdução.
 Outra frase da introdução. 
 
 Esse já será outro parágrafo da introdução.
+
+Trabalho anteriores bem legal firezque faz coisas parecidas
+\citep{Hansen2010}.
+Isso foi analisado primeiro por \citet{Hansen2010}.
 
 \section{Medotologia}
 \label{sec:metodos}
@@ -76,5 +80,8 @@ Analisamos os dados de 225 países. São muitos para listar aqui. Confie em mim.
 \end{figure}
 
 Os resultados da análise de variação de temperatura estão na figura \ref{fig:variacao}.
+
+\bibliographystyle{apalike}
+\bibliography{referencias.bib}
 
 \end{document}
