@@ -7,7 +7,8 @@
 # As variáveis 1, 2, 3, ..., contem os argumentos passados na linha de comando
 # para o script. Nesse caso, "$1" é o primeiro argumento passado (a pasta onde
 # estão os dados).
-for arquivo in "$1"/*.csv
+#for arquivo in "$1"/*.csv
+for arquivo in dados/temperatura/*.csv
 do
     # O comando "echo" imprime algo na tela.
     # O que está entre $() é executado primeiro e o seu resultado é passado
