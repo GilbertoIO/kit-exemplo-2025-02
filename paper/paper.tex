@@ -5,6 +5,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass{article}
 
+% Deixa o pdf em português
+\usepackage[brazil]{babel}
+% Pacote para figura
+\usepackage{graphicx}
+
 
 % Corpo
 % Onde a gente escreve o texto
@@ -12,6 +17,64 @@
 \begin{document}
 
 % Ambiente, entre begin e end
-Meu artigo bem legal.
+
+\title{Análise de variação de temperatura dos últimos 5 anos}
+\author{Gilberto Dias, Yago Castro, Arthur Macêdo}
+
+% Insere o título no pdf
+\maketitle
+
+\begin{abstract}
+Meu resumo legalzão.
+\end{abstract}
+
+\section{Introdução}
+Isso vai ser a minha introdução. 
+Outra frase da introdução. 
+
+Esse já será outro parágrafo da introdução.
+
+\section{Medotologia}
+\label{sec:metodos}
+
+Aqui eu vou descrever tudo que eu fiz.
+Ajustamos uma reta aos cinco últimos anos dos dados
+de temperatura média mensal para cada país.
+Assim calculamos a taxa de variação de temperatura recente. 
+
+A equação da reta é
+
+%\begin{equation}
+%y = \int_\Omega x dx,
+%\end{equation}
+
+\begin{equation}
+T (t) = a t + b,
+\label{eq:reta}
+\end{equation}
+
+\noindent
+onde $T$ é a temperatura, $t$ é o tempo, $a$ é o coeficiente angular e 
+$b$ é o coeficiente linear.
+
+Utilizamos a equação \ref{eq:reta} em um código Python para fazer o ajuste da
+reta com o método dos mínimos quadrados. Isso está descrito na seção \ref{sec:metodos}.
+
+\section{Resultados}
+
+Analisamos os dados de 225 países. São muitos para listar aqui. Confie em mim.
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=0.5\columnwidth]{../figuras/variacao_temperatura.png}
+	\caption{
+		Variação de temperatura média mensal dos cinco últimos anos.
+		a) Países com as cinco maiores variação de temperatura.
+		b) Países com as cinco menores variação de temperatura.
+	}
+	\label{fig:variacao}
+\end{figure}
+
+Os resultados da análise de variação de temperatura estão na figura \ref{fig:variacao}.
 
 \end{document}
