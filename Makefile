@@ -9,11 +9,14 @@ all: paper/paper.pdf resultados/numero_de_dados.txt
 	# Nenhum comando, o "all" é um alvo fictício
 	
 clean: 
-	rm -r -f -v resultados dados figuras paper/paper.pdf
+	rm -r -f -v resultados dados figuras paper/paper.pdf paper/paises.tex
 	
 # adicionado na aula de 20/02
-paper/paper.pdf: paper/paper.tex figuras/variacao_temperatura.png
+paper/paper.pdf: paper/paper.tex figuras/variacao_temperatura.png paper/paises.tex
 	tectonic -X compile paper/paper.tex
+# adicionado na aula de 20/02
+paper/paises.tex: dados/temperature-data.zip code/lista_paises.py
+	python code/lista_paises.py dados/temperatura/ > paper/paises.tex
 
 resultados/numero_de_dados.txt: dados/temperature-data.zip
 	mkdir -p resultados
